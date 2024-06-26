@@ -1,6 +1,5 @@
 import express, { Application } from "express";
 import morgan from "morgan";
-import indexRouter from "./routes/index.routes";
 import PostRouter from "./routes/post.router";
 
 export class App {
@@ -23,7 +22,6 @@ export class App {
   }
 
   router() {
-    this.app.use(indexRouter);
     this.app.use(PostRouter);
   }
 
